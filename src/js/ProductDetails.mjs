@@ -47,6 +47,7 @@ export default class ProductDetails {
         const existingCart = getLocalStorage("addToCart") || []; // Retrieve existing items
         existingCart.push(this.product); // Append the new product
         setLocalStorage("addToCart", existingCart); // Save back to local storage
+        notifyProductAddedtoCart()
 
     }
 
@@ -60,4 +61,13 @@ export default class ProductDetails {
         );
     
       }
+}
+
+
+function notifyProductAddedtoCart(){
+  Swal.fire({
+    title: "Success!",
+    text: "Product Added to Cart",
+    icon: "success"
+  });
 }
