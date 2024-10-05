@@ -25,3 +25,7 @@ export default class ProductData {
 
   
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dc5b7eefa8be1ea26a4a8b918af22645e14464c6
