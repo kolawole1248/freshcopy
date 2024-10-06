@@ -6,6 +6,16 @@
     <title>Sleep Outside | Home</title>
     <link rel="stylesheet" href="/css/style.css" />
     <script src="js/main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      .swal2-popup-class {
+    font-size: 1.2em; /* Adjust font size */
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+    </style>
   </head>
   <body>
     <header class="divider">
@@ -108,5 +118,23 @@
       </section>
     </main>
     <footer>&copy;NOT a real business</footer>
+    <script>
+      function showWelcomeAlert() {
+    Swal.fire({
+        title: 'Welcome to the site!',
+        text: 'You can start carting',
+        icon: 'success',
+        showConfirmButton: false, 
+        timer: 3000, 
+        timerProgressBar: true, 
+        customClass: {
+            popup: 'swal2-popup-class' 
+        }
+    });
+}
+
+
+window.onload = showWelcomeAlert;
+    </script>
   </body>
 </html>
